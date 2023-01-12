@@ -43,10 +43,23 @@ print(dogs)
 # The pop function returns and removes the last element from the list
 print(dogs.pop())
 print(dogs)
-
-
-
-
+# to insert an element in between a lst we use the insert function or slicing
+dogs.insert(2, "Cruise")
+print(dogs)
+dogs[1:4] = ["Tom", "Uncle"] # sliced part will be replaced by the new list, length of both sides need not match, [inclusive, exclusive]
+print(dogs)
+# Sorting Lists
+items = ["Priyam", "priyam", "Rocks", "Hey", "There", "Oxocarbon"]
+items.sort()
+print(items)
+# Sorting here is done using the ASCII values
+# to prevent that from happening, i.e. to sot the list lexicographically, we use:
+items.sort(key=str.lower)
+print(items)
+# sorting modifies the original list so to prevent that we can create a copy of the list by:
+items1 = items[:]
+# we also have a way to sort a list without modifying the original list:
+print(sorted(items, key=str.lower))# this returns a new list leaving the original list untouched
 
 
 
